@@ -1,3 +1,14 @@
+/*
+List object has the following structure
+_________
+| value |    _________
+| rest	---> | value |
+|_______|    | rest  ---> null
+  	     |_______|
+
+*/
+
+//Convert array into List
 const arrayToList = (arr) => {
   
   if(arr.length == 1) {
@@ -10,6 +21,7 @@ const arrayToList = (arr) => {
   }
 }
 
+//Convert list values into array 
 const listToArray = (list) => {
   
 	let ret = [];
@@ -23,16 +35,18 @@ const listToArray = (list) => {
 	return ret;
 }
 
+//Create new list with new first item
 const prepend = (value, list) => {
   
   return { value, rest: list };
 }
 
-const nth = (list, pos) => {
+//Get value of the nth element of the list
+const nth = (list, n) => {
   
   if (pos === 0) return list.value;
   else {
-    return nth(list.rest, pos-1);
+    return nth(list.rest, n-1);
   }
 }
 
