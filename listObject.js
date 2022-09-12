@@ -24,15 +24,15 @@ const arrayToList = (arr) => {
 //Convert list values into array 
 const listToArray = (list) => {
   
-	let ret = [];
-  	let item = list;
+  let ret = [];
+  let item = list;
   
-  	while (item.rest !== null) {
-    	ret.push(item.value);
-      	item = item.rest;
-    }
+  while (item.rest !== null) {
+     ret.push(item.value);
+     item = item.rest;
+  }
   
-	return ret;
+  return ret;
 }
 
 //Create new list with new first item
