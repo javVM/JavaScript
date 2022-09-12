@@ -44,7 +44,7 @@ const prepend = (value, rest) => {
 //Get value of the nth element of the list
 const nth = (list, n) => {
   
-  if (pos === 0) return list.value;
+  if (n === 0) return list.value;
   else {
     return nth(list.rest, n-1);
   }
