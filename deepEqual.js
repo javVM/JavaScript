@@ -1,8 +1,8 @@
 const deepEqual = (elementA, elementB) => {
   
-  if(typeof elementA !== "object" || typeof elementB !== "object")
-    return elementA === elementB;
-  else {
+  if((typeof elementA === "object" && elementA != null) &&
+     (typeof elementB === "object" && elementB != null))
+  {
     
     propA= Object.keys(elementA);
   	propB = Object.keys(elementB);
@@ -19,8 +19,12 @@ const deepEqual = (elementA, elementB) => {
       return ret;
     }
   }
+  else {
+    return elementA === elementB;
+  }
 }
 
+let n;
 
 let obj = {here: {is: "an"}, object: 2};
 console.log(deepEqual(obj, obj));
