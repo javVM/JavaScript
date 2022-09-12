@@ -4,8 +4,8 @@ const deepEqual = (elementA, elementB) => {
      (typeof elementB === "object" && elementB != null))
   {
     
-    propA= Object.keys(elementA);
-    propB= Object.keys(elementB);
+    propA = Object.keys(elementA);
+    propB = Object.keys(elementB);
     
     if(propA.length != propB.length) return false;
     else {
