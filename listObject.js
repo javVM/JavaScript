@@ -38,7 +38,7 @@ const listToArray = (list) => {
 //Create new list with new first item
 const prepend = (value, rest) => {
   
-  return { value, rest: rest };
+  return { value, rest };
 }
 
 //Get value of the nth element of the list
