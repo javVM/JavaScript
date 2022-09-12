@@ -5,7 +5,7 @@ const deepEqual = (elementA, elementB) => {
   {
     
     propA= Object.keys(elementA);
-  	propB = Object.keys(elementB);
+    propB= Object.keys(elementB);
     
     if(propA.length != propB.length) return false;
     else {
