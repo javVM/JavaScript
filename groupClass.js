@@ -8,9 +8,7 @@ class Group {
   }
   
   delete(elem) {
-    
     const pos = this.elements.indexOf(elem);
-    
     if(pos > -1) this.elements.splice(pos,1);
   }
   
