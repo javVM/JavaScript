@@ -17,7 +17,7 @@ class Group {
   }
   
   static from(obj) {
-    group = new Group();
+    let group = new Group();
     for (let elem of obj) {
       group.add(elem);
     }
